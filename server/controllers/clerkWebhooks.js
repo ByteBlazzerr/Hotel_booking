@@ -30,7 +30,7 @@ const clerkWebhooks= async (req, res) => {
 
             switch (type) {
                 case "user.created":{
-                    await User,create(userData);
+                    await User.create(userData);
                     break;
                 }
                 case "user.updated":{
