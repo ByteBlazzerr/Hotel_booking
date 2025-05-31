@@ -10,9 +10,10 @@ connectDB();
 const app=express();
 app.use(cors());  //Enable Cross-Origin Resourse Sharing
 app.use(express.json()); //Parse JSON bodies
-app.use(clerkMiddleware())
+app.use(clerkMiddleware()) //Middleware to authenticate Clerk users
 
 app.use("/api/clerk",clerkWebhooks)
+
 
 app.get('/',(req,res)=>res.send("API is working fine"))
 const PORT=process.env.PORT || 3000;
