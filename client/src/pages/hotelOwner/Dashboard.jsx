@@ -41,8 +41,9 @@ const Dashboard = () => {
         align="left"
         font="outfit"
         title="Dashboard"
-        subTitle='Monitor your hotel performance, manage bookings, and add new rooms with ease. Our dashboard provides you with all the tools you need to run your hotel efficiently.'>
-        </Title>
+        subTitle="Command your domain with grace — manage bookings, oversee operations, and curate your regal retreat with ease and sophistication."
+        />
+
         <div className='flex gap-4 my-8'>
             {/* Total Bookings */}
             <div className='bg-primary/3 border border-primary/10 rounded flex p-4 pr-8'>
