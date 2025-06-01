@@ -1,9 +1,10 @@
-import logo from './logo.svg'
+import logo from './Logo.svg'
 import searchIcon from './searchIcon.svg'
 import userIcon from './userIcon.svg'
 import calenderIcon from './calenderIcon.svg'
 import locationIcon from './locationIcon.svg'
 import starIconFilled from './starIconFilled.svg'
+import rightarrow from "./right-arrow.png"
 import arrowIcon from './arrowIcon.svg'
 import starIconOutlined from './starIconOutlined.svg'
 import instagramIcon from './instagramIcon.svg'
@@ -23,6 +24,7 @@ import badgeIcon from './badgeIcon.svg'
 import menuIcon from './menuIcon.svg'
 import closeMenu from './closeMenu.svg'
 import guestsIcon from './guestsIcon.svg'
+import gymaccess from './gymaccess.png'
 import roomImg1 from './roomImg1.png'
 import roomImg2 from './roomImg2.png'
 import roomImg3 from './roomImg3.png'
@@ -57,6 +59,7 @@ export const assets = {
     roomServiceIcon,
     mountainIcon,
     poolIcon,
+    rightarrow,
     closeIcon,
     homeIcon,
     locationFilledIcon,
@@ -72,6 +75,7 @@ export const assets = {
     uploadArea,
     totalBookingIcon,
     totalRevenueIcon,
+    gymaccess
 }
 
 export const cities = [
@@ -83,17 +87,62 @@ export const cities = [
 
 // Exclusive Offers Dummy Data
 export const exclusiveOffers = [
-    { _id: 1, title: "Summer Escape Package", description: "Enjoy a complimentary night and daily breakfast", priceOff: 25, expiryDate: "Aug 31", image: exclusiveOfferCardImg1 },
-    { _id: 2, title: "Romantic Getaway", description: "Special couples package including spa treatment", priceOff: 20, expiryDate: "Sep 20", image: exclusiveOfferCardImg2 },
-    { _id: 3, title: "Luxury Retreat", description: "Book 60 days in advance and save on your stay at any of our luxury properties worldwide.", priceOff: 30, expiryDate: "Sep 25", image: exclusiveOfferCardImg3 },
-]
+  {
+    _id: 1,
+    title: "Majestic Summer Sojourn",
+    description: "Revel in royalty with a free night and gourmet breakfast each morning.",
+    priceOff: 25,
+    expiryDate: "Aug 31",
+    image: exclusiveOfferCardImg1,
+  },
+  {
+    _id: 2,
+    title: "Royal Romance Escape",
+    description: "A couple’s dream — indulge in a spa ritual and candlelit serenity.",
+    priceOff: 20,
+    expiryDate: "Sep 20",
+    image: exclusiveOfferCardImg2,
+  },
+  {
+    _id: 3,
+    title: "Imperial Advance Retreat",
+    description: "Reserve early and enjoy exclusive rates across our grandest estates.",
+    priceOff: 30,
+    expiryDate: "Sep 25",
+    image: exclusiveOfferCardImg3,
+  },
+];
+
 
 // Testimonials Dummy Data
 export const testimonials = [
-    { id: 1, name: "Emma Rodriguez", address: "Barcelona, Spain", image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200", rating: 5, review: "I've used many booking platforms before, but none compare to the personalized experience and attention to detail that QuickStay provides." },
-    { id: 2, name: "Liam Johnson", address: "New York, USA", image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200", rating: 4, review: "QuickStay exceeded my expectations. The booking process was seamless, and the hotels were absolutely top-notch. Highly recommended!" },
-    { id: 3, name: "Sophia Lee", address: "Seoul, South Korea", image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=200", rating: 5, review: "Amazing service! I always find the best luxury accommodations through QuickStay. Their recommendations never disappoint!" }
+  {
+    id: 1,
+    name: "Isabella Laurent",
+    address: "Paris, France",
+    image: "https://images.unsplash.com/photo-1633332755192-727a05c4013d?q=80&w=200",
+    rating: 5,
+    review: "QuickStay redefines premium travel. From booking to check-out, the experience was flawless and truly regal. I felt pampered at every step.",
+  },
+  {
+    id: 2,
+    name: "James McAllister",
+    address: "Edinburgh, Scotland",
+    image: "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=200",
+    rating: 4,
+    review: "I was impressed by the curated luxury stays QuickStay offers. The ambiance, service, and location were top-tier. Highly recommended for luxury seekers!",
+  },
+  {
+    id: 3,
+    name: "Hana Takahashi",
+    address: "Kyoto, Japan",
+    image: "https://images.unsplash.com/photo-1701615004837-40d8573b6652?q=80&w=200",
+    rating: 5,
+    review: "QuickStay never disappoints. Every recommendation feels like a royal retreat — elegant, comfortable, and exceptionally well-managed.",
+  }
 ];
+
+
 
 // Facility Icon
 export const facilityIcons = {
@@ -102,15 +151,33 @@ export const facilityIcons = {
     "Room Service": assets.roomServiceIcon,
     "Mountain View": assets.mountainIcon,
     "Pool Access": assets.poolIcon,
+    "Gym Access": assets.gymaccess
 };
 
 // For Room Details Page
 export const roomCommonData = [
-    { icon: assets.homeIcon, title: "Clean & Safe Stay", description: "A well-maintained and hygienic space just for you." },
-    { icon: assets.badgeIcon, title: "Enhanced Cleaning", description: "This host follows Staybnb's strict cleaning standards." },
-    { icon: assets.locationFilledIcon, title: "Excellent Location", description: "90% of guests rated the location 5 stars." },
-    { icon: assets.heartIcon, title: "Smooth Check-In", description: "100% of guests gave check-in a 5-star rating." },
+  {
+    icon: assets.homeIcon,
+    title: "Immaculate Comfort",
+    description: "Enjoy a pristine, well-kept space designed for relaxation and peace of mind.",
+  },
+  {
+    icon: assets.badgeIcon,
+    title: "Top-Tier Cleanliness",
+    description: "Our hosts follow premium hygiene protocols for a spotless experience.",
+  },
+  {
+    icon: assets.locationFilledIcon,
+    title: "Prime Location",
+    description: "Conveniently located — 90% of guests gave a 5-star rating for location.",
+  },
+  {
+    icon: assets.heartIcon,
+    title: "Seamless Check-In",
+    description: "Quick and easy access — 100% of guests rated check-in as excellent.",
+  },
 ];
+
 
 // User Dummy Data
 export const userDummyData = {

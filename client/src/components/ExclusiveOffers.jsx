@@ -8,10 +8,10 @@ const ExclusiveOffers = () => {
   return (
     <div className='flex flex-col items-center px-6 md:px-16 lg:px-24 xl:px-32 pt-20 pb-30'>
         <div className='flex flex-col md:flex-row items-center justify-between w-full'>
-            <Title align='left' title='Exclusive Offers' subTitle="Take advantage of our exclusive offers and discounts on select properties, ensuring you get the best value for your stay.">
+            <Title align='left' title='Royal Retreats Await' subTitle="Indulge in handpicked luxury stays with majestic discounts — curated just for those who desire the finer things in life.">
             </Title>
             <button className='group flex items-center gap-2 font-medium cursor-pointer max-md:mt-12'>
-                View All Offers
+                Explore All Retreats
                 <img src={assets.arrowIcon} alt="arrow-icon"
                 className='group-hover:translate-x-1 transition-all'></img>
             </button>
@@ -24,7 +24,7 @@ const ExclusiveOffers = () => {
                     <div>
                         <p className='text-2xl font-medium font-playfair'>{item.title}</p>
                         <p>{item.description}</p>
-                        <p className='text-xs text-white/70 mt-3'>Expires {item.expiryDate}</p>
+                        <p className='text-xs text-white/70 mt-3'>Valid until {item.expiryDate}</p>
                     </div>
                     <button>
                         View Offers

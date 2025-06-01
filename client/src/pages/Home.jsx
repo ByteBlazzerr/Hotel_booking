@@ -5,6 +5,7 @@ import ExclusiveOffers from '../components/ExclusiveOffers'
 import Testimonial from '../components/Testimonial'
 import NewsLetter from '../components/NewsLetter'
 import RecommendedHotels from '../components/RecommendedHotels'
+import About from '../components/About'
 const Home = () => {
   return (
     <>
@@ -13,6 +14,7 @@ const Home = () => {
         <FeaturedDestinantion />
         <ExclusiveOffers />
         <Testimonial />
+        <About></About>
         <NewsLetter></NewsLetter>
     </>
   )

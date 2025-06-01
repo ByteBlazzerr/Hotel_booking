@@ -10,7 +10,7 @@ const RoomDetails = () => {
     const {id}=useParams()
     const {rooms,getToken,axios,navigate}=useAppContext()
     const [room,setRoom]=useState(null);
-    const [mainImage,setMainImage]=useState(null);
+    const [mainImage,setMainImage]=useState('');
     const [checkInDate,setCheckInDate]=useState(null);
     const [checkOutDate,setCheckOutDate]=useState(null);
     const [guests,setGuests]=useState('');
@@ -21,7 +21,7 @@ const RoomDetails = () => {
         const room=rooms.find(room=>room._id === id)
         room && setRoom(room)
         room && setMainImage(room.images[0])
-    },[rooms])
+    },[rooms,id])
 
     // Check if the room is Available
     const checkAvailability =async()=>{
@@ -106,7 +106,7 @@ const RoomDetails = () => {
 
         {/* Room Images */}
         <div className='flex flex-col lg:flex-row mt-6 gap-6'>
-            <div className='lg:w-1/2 w-full'>
+            <div className='lg:w-1/2 w-full h-100'>
                 <img src={mainImage} alt="Room Image" className='w-full rounded-xl shadow-lg object-cover'>
                 </img>
             </div>
@@ -114,7 +114,7 @@ const RoomDetails = () => {
                 {room?.images.length>1 && room.images.map((image,index)=>(
                     <img onClick={()=>setMainImage(image)}
                     key={index} src={image} alt="Room Image"
-                    className={`w-full rounded-xl shadow-md object-cover cursor-pointer ${mainImage ===image && 'outline-3 outline-orange-500'}`}>
+                    className={`w-full rounded-xl shadow-md object-cover h-42 cursor-pointer ${mainImage ===image && 'outline-3 outline-orange-500'}`}>
                     </img>
                 ))}
             </div>

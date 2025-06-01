@@ -1,30 +1,67 @@
 import React from 'react'
 import { assets } from '../assets/assets'
+import { useState } from 'react';
+import toast from 'react-hot-toast';
 
 const Footer = () => {
+
+  const [email, setEmail] = useState('');
+
+  const handleSubscribe = () => {
+    const isValidEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    if (!isValidEmail) {
+      toast.error('Please enter a valid email address.');
+      return;
+    }
+
+    // Simulate success action
+    toast.success('You’ve successfully subscribed!');
+    setEmail('');
+  };
+
     return (
         <div className='bg-[#F6F9FC] text-gray-500/80 pt-8 px-6 md:px-16 lg:px-24 xl:px-32'>
         <div className='flex flex-wrap justify-between gap-12 md:gap-6'>
             <div className='max-w-80'>
-                <img src={assets.logo} alt="logo" className='mb-4 h-8 md:h-9 invert opacity-80' />
+                <div className='flex flex-row'>
+                    <img src={assets.logo} alt="logo" className='mb-4 h-8 md:h-9 invert opacity-80' />
+                    <p className='text-black opacity-90 px-3 text-2xl font-playfair font-extrabold'>Regal Retreat</p>
+
+                </div>
                 <p className='text-sm'>
-                    QuickStay is your go-to platform for booking unique accommodations and unforgettable experiences. Whether you're looking for a cozy cabin in the woods, a chic city apartment, or a beachfront villa, we have something for everyone.
+                    RegalRetreat is your go-to platform for booking unique accommodations and unforgettable experiences. Whether you're looking for a cozy cabin in the woods, a chic city apartment, or a beachfront villa, we have something for everyone.
                 </p>
                 <div className='flex items-center gap-3 mt-4'>
-                    <img src={assets.instagramIcon}
+                <a href="https://instagram.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                    <img
+                    src={assets.instagramIcon}
                     alt="instagram-icon"
-                    className='w-6'></img>
-                    <img src={assets.facebookIcon}
+                    className='w-6 cursor-pointer'
+                    />
+                </a>
+                <a href="https://facebook.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                    <img
+                    src={assets.facebookIcon}
                     alt="facebook-icon"
-                    className='w-6'></img>
-                    <img src={assets.twitterIcon}
+                    className='w-6 cursor-pointer'
+                    />
+                </a>
+                <a href="https://twitter.com/yourprofile" target="_blank" rel="noopener noreferrer">
+                    <img
+                    src={assets.twitterIcon}
                     alt="twitter-icon"
-                    className='w-6'></img>
-                    <img src={assets.linkendinIcon}
+                    className='w-6 cursor-pointer'
+                    />
+                </a>
+                <a href="https://linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer">
+                    <img
+                    src={assets.linkendinIcon}
                     alt="linkedin-icon"
-                    className='w-6'></img>
-        
+                    className='w-6 cursor-pointer'
+                    />
+                </a>
                 </div>
+
             </div>
 
             <div>
@@ -55,17 +92,19 @@ const Footer = () => {
                     Subscribe to our newsletter for inspiration and special offers.
                 </p>
                 <div className='flex items-center mt-4'>
-                    <input type="text" className='bg-white rounded-l border border-gray-300 h-9 px-3 outline-none' placeholder='Your email' />
-                    <button className='flex items-center justify-center bg-black h-9 w-9 aspect-square rounded-r'>
+                    <input type="email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)} className='bg-white rounded-l border border-gray-300 h-9 px-3 outline-none' placeholder='Your email' />
+                    <button className='flex items-center justify-center bg-black h-9 w-9 aspect-square rounded-r' onClick={handleSubscribe}>
                         {/* Arrow icon */}
-                        <img src={assets.arrowIcon}></img>
+                        <img src={assets.rightarrow} className=' w-6 cursor-pointer' ></img>
                     </button>
                 </div>
             </div>
         </div>
         <hr className='border-gray-300 mt-8' />
         <div className='flex flex-col md:flex-row gap-2 items-center justify-between py-5'>
-            <p>© {new Date().getFullYear()} IET. All rights reserved.</p>
+            <p>© {new Date().getFullYear()} RegalRetreat. All rights reserved.</p>
             <ul className='flex items-center gap-4'>
                 <li><a href="#">Privacy</a></li>
                 <li><a href="#">Terms</a></li>
