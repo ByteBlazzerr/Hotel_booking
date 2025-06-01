@@ -27,5 +27,10 @@ app.use('/api/hotels',hotelRouter);
 app.use('/api/rooms',roomRouter);
 app.use('/api/bookings',bookingRouter);
 
-const PORT=process.env.PORT || 3000;
+app.use((err, req, res, next) => {
+  console.error(err);
+  res.status(500).json({ success: false, message: err.message });
+});
+
+const PORT=process.env.PORT || 5000;
 app.listen(PORT,()=>console.log(`Server running on PORT ${PORT}`))

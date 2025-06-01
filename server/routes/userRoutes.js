@@ -9,4 +9,4 @@ userRouter.post('/store-recent-search',protect,storeRecentSearchedCities);
 
 
 
-export default userRouter;;
+export default userRouter;

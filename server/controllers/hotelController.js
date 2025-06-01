@@ -26,6 +26,7 @@ export const registerHotel =async(req,res)=>{
         });
     }
     catch(error){
+        console.error("Hotel registration error:",error);
         res.json({
             success:false,
             message:error.message
