@@ -9,12 +9,17 @@ import connectCloudinary from './config/cloudinary.js';
 import hotelRouter from './routes/hotelRoutes.js';
 import roomRouter from './routes/roomRoutes.js';
 import bookingRouter from './routes/bookingRoutes.js';
+import { stripeWebhooks } from './controllers/stripeWebhooks.js';
 
 connectDB();
 connectCloudinary();
 
 const app=express();
 app.use(cors());  //Enable Cross-Origin Resourse Sharing
+
+// API to listen to Stripe Webhooks
+app.post('/api/stripe',express.raw({type:"application/json"}),stripeWebhooks)
+
 app.use(express.json()); //Parse JSON bodies
 app.use(clerkMiddleware()) //Middleware to authenticate Clerk users
 
