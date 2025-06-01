@@ -21,7 +21,7 @@ export const stripeWebhooks=async(request,response)=>{
     }
 
     // Handle the event
-    if(event.type==="checkout.session.completed"){
+    if(event.type==="payment_intent.succeeded"){
         const paymentIntent=event.data.object;
         const paymentIntentId=paymentIntent.id;
 
