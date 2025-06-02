@@ -7,7 +7,7 @@ const stripeInstance =new stripe(process.env.STRIPE_SECRET_KEY);
 export const stripeWebhooks=async(request,response)=>{
     // Stripe Gateway Initialize
 
-    const sigd=request.headers['stripe-signature'];
+    const sigd=request.header['stripe-signature'];
 
     let event;
     try{
