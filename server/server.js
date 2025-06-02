@@ -15,7 +15,15 @@ connectDB();
 connectCloudinary();
 
 const app=express();
-app.use(cors());  //Enable Cross-Origin Resourse Sharing
+// app.use(cors());  //Enable Cross-Origin Resourse Sharing
+
+app.use(cors({
+  origin: 'https://regalretreat1.vercel.app',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  credentials: true
+}));
+app.options('*', cors()); // preflight support
+
 
 // API to listen to Stripe Webhooks
 app.post('/api/stripe',bodyParser.raw({type:"application/json"}),stripeWebhooks)
