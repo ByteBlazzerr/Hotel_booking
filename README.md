@@ -137,8 +137,7 @@ Hotel_booking/
 
 ## 🖼️ Screenshot
 
-![Regal-Retreat Screenshot](![image](https://github.com/user-attachments/assets/3f6fd1ee-dd8b-4bb0-9c13-c813c81dd53f)
-)
+![image](https://github.com/user-attachments/assets/ce9c8c70-62f8-4ea0-8a6e-20d8396339a8)
 
 ---
 
