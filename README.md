@@ -1,4 +1,4 @@
-# 🏨 Hotel Booking System
+# 🏨 Regal-Retreat
 
 A full-stack hotel booking platform where users can discover and reserve rooms, and hotel owners can manage listings. It includes secure payments, real-time availability, and image management.
 
