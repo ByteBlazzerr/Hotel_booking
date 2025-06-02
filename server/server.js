@@ -10,6 +10,7 @@ import hotelRouter from './routes/hotelRoutes.js';
 import roomRouter from './routes/roomRoutes.js';
 import bookingRouter from './routes/bookingRoutes.js';
 import { stripeWebhooks } from './controllers/stripeWebhooks.js';
+import bodyParser from 'body-parser';
 
 connectDB();
 connectCloudinary();
